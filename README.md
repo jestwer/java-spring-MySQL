@@ -1,3 +1,5 @@
 # java-spring-MySQL
 Used Java Spring(boot, mvc, hibernate, thymleaf), DB - MySQL
-1. Realize Ui which can do CRUD operation and change data from UI
+Realize Ui which can do CRUD operation and change data from UI
+Use "Sql_script.txt" and make query in MySQL DB
+Set sql driver settings (application.property)
