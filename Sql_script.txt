@@ -1,0 +1,11 @@
+create table car(
+ id bigint not null auto_increment,
+    price decimal null,
+    model varchar(80) null,
+    age varchar(80) null,
+    name varchar(80) null,
+    creator_name varchar(80) null,
+    PRIMARY KEY (id)
+);
+insert into car (price,model,age,name,creator_name)
+values (12000,"Mazda","1920","rx-1","Abdurovich")
