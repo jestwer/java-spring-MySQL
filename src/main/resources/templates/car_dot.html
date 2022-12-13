@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+<table style="border: 3px solid green;"> 
+	<td>
+	<table border="1">
+		<tr>
+			<th>Id</th>
+			<th>Price</th>
+			<th>Model</th>
+		</tr>
+		<tr th:each="car: ${cars}">  //for (car in cars)
+        	<td th:text="${car.id}" />
+        	<td th:text="${car.price}" />
+        	<td th:text="${car.model}" />
+    	</tr>
+	</table>
+	</td>
+	<td>
+	<table>
+	<tr>
+	<br/>
+	<a href="/create"> <button> Create new Advertisement </button></a>
+	</tr>
+	</table>
+	<br/>
+	<form th:action="@{/getResult}" th:object="${car}" method="get">
+	    <table border="1">
+	        <tr>
+	            <td><label/>Show full info by Id</td>
+	            <td><input type="text" th:field="*{id}"/></td>
+	            <td><input type="submit" value="Show" /></td>
+	        </tr>
+	    </table>
+	</form>
+	<br/>
+	<form th:action="@{/del}" th:object="${car}" method="get">
+	    <table border="1">
+	        <tr>
+	            <td><label/>Buy car by Id</td>
+	            <td><input type="text" th:field="*{id}"/></td>
+	            <td><input type="submit" value="Buy" /></td>
+	        </tr>
+	    </table>
+	</form>
+	</td>
+</table>
+</body>
+</html>

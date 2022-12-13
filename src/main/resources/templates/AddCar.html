@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/createCar}" th:object="${car}" method="post">
+    <table border="1">
+        <tr>
+            <td><label/>Price</td>
+            <td><input type="text" th:field="*{price}"/></td>
+        </tr>
+         <tr>
+            <td><label/>Model</td>
+            <td><input type="text" th:field="*{model}"/></td>
+        </tr>
+         <tr>
+            <td><label/>Age</td>
+            <td><input type="text" th:field="*{age}"/></td>
+        </tr>
+         <tr>
+            <td><label/>Name</td>
+            <td><input type="text" th:field="*{name}"/></td>
+        </tr>
+         <tr>
+            <td><label/>Creator name</td>
+            <td><input type="text" th:field="*{creator_name}"/></td>
+        </tr>
+        <tr>
+            <td> </td>
+             <td>Create<input type="submit" value="Create" /></td>
+        </tr>
+    </table>
+</form>
+<br/>
+<a href="/show"> <button> Back to Main</button></a>
+
+</body>
+</html>
